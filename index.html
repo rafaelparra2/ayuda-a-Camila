@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda a María - Operación de Escoliosis</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem;
+            text-align: center;
+            background: white;
+            margin: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--secondary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .goal-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .progress-bar {
+            background: #e9ecef;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .progress {
+            background: var(--success);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .goal-info {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        
+        .donate-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .donate-btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .section {
+            background: white;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .story {
+            line-height: 1.8;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        
+        .updates {
+            margin-top: 2rem;
+        }
+        
+        .update {
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .update-date {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        .donors {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .donor {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .donor-amount {
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ayuda a María - Operación de Escoliosis</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <img src="https://placehold.co/400x400?text=Foto+de+María" alt="María - 15 años" class="hero-img">
+            <h2>Necesitamos tu ayuda para la operación de escoliosis de María</h2>
+            <p>María tiene 15 años y fue diagnosticada con escoliosis idiopática del adolescente. Su curvatura espinal ha alcanzado los 55 grados y necesita una operación urgente para evitar complicaciones graves.</p>
+            
+            <div class="goal-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 35%;">35%</div>
+                </div>
+                <div class="goal-info">
+                    <span>Recaudado: $8,750</span>
+                    <span>Meta: $25,000</span>
+                </div>
+            </div>
+            
+            <a href="#donar" class="donate-btn">Donar Ahora</a>
+            
+            <p>187 personas han donado • 23 días restantes</p>
+        </section>
+        
+        <section class="section">
+            <h2>La Historia de María</h2>
+            <div class="story">
+                <p>María es una adolescente de 15 años llena de vida y sueños. Le encanta bailar, pintar y pasar tiempo con sus amigos. Hace un año, durante un chequeo médico rutinario, descubrimos que tenía escoliosis.</p>
+                
+                <p>Al principio, la curvatura era leve (20 grados) y los doctores recomendaron fisioterapia y uso de corsé. Sin embargo, en los últimos meses la curvatura ha progresado rápidamente hasta alcanzar los 55 grados, causándole dolor constante y dificultades para respirar.</p>
+                
+                <p>Los médicos han recomendado una fusión espinal posterior para corregir la curvatura y evitar que dañe sus órganos internos. Esta operación es costosa y no está completamente cubierta por nuestro seguro.</p>
+                
+                <p>La escoliosis idiopática del adolescente afecta a 3 de cada 100 jóvenes. Sin tratamiento, puede causar dolor crónico, problemas cardiorrespiratorios y movilidad limitada.</p>
+                
+                <p>Con tu ayuda, María podrá someterse a esta operación crucial y volver a hacer las actividades que ama sin dolor. Cada donación, por pequeña que sea, nos acerca a nuestro objetivo.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Fotos</h2>
+            <div class="gallery">
+                <img src="https://placehold.co/400x300?text=Radiografía" alt="Radiografía que muestra la curvatura">
+                <img src="https://placehold.co/400x300?text=María+antes" alt="María antes del diagnóstico">
+                <img src="https://placehold.co/400x300?text=Familia" alt="María con su familia">
+                <img src="https://placehold.co/400x300?text=Tratamiento" alt="Sesión de fisioterapia">
+            </div>
+        </section>
+        
+        <section class="section" id="donar">
+            <h2>Cómo puedes ayudar</h2>
+            <p>Necesitamos recaudar $25,000 para cubrir los gastos de la operación, hospitalización, medicamentos y rehabilitación.</p>
+            
+            <h3>Opciones de donación:</h3>
+            <ul>
+                <li>Transferencia bancaria</li>
+                <li>Tarjeta de crédito/débito</li>
+                <li>PayPal</li>
+                <li>Bizum</li>
+            </ul>
+            
+            <a href="#" class="donate-btn">Donar ahora</a>
+            
+            <p>También puedes ayudar compartiendo esta página en tus redes sociales:</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">Email</a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Donantes recientes</h2>
+            <div class="donors">
+                <div class="donor">
+                    <h3>Ana Martínez</h3>
+                    <p class="donor-amount">$200</p>
+                    <p>¡Ánimo María! Te queremos mucho.</p>
+                </div>
+                <div class="donor">
+                    <h3>José López</h3>
+                    <p class="donor-amount">$100</p>
+                    <p>Espero que te recuperes pronto.</p>
+                </div>
+                <div class="donor">
+                    <h3>Donación anónima</h3>
+                    <p class="donor-amount">$500</p>
+                    <p>Con mucho cariño para tu operación.</p>
+                </div>
+                <div class="donor">
+                    <h3>Compañeros de clase</h3>
+                    <p class="donor-amount">$350</p>
+                    <p>¡Todos te apoyamos María!</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section updates">
+            <h2>Actualizaciones</h2>
+            <div class="update">
+                <p class="update-date">15 de octubre, 2023</p>
+                <p>Hoy tuvimos una nueva consulta con el cirujano. La operación está programada para el 15 de diciembre si logramos reunir los fondos necesarios. ¡Gracias a todos por su apoyo!</p>
+            </div>
+            <div class="update">
+                <p class="update-date">5 de octubre, 2023</p>
+                <p>¡Hemos alcanzado el 35% de nuestra meta! Estamos muy agradecidos con todas las personas que han donado y compartido nuestra causa. María está emocionada con la respuesta.</p>
+            </div>
+            <div class="update">
+                <p class="update-date">25 de septiembre, 2023</p>
+                <p>Comenzamos esta campaña hoy. Estamos llenos de esperanza y fe en la bondad de las personas. Gracias por visitar nuestra página y considerar ayudar a nuestra hija.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>#EsperanzaParaMaría</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <p>Contacto: esperanzaparamaria@email.com | Tel: +34 600 123 456</p>
+            <p>© 2023 Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
